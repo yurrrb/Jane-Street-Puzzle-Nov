@@ -1,18 +1,37 @@
-# Pressure Points: working notes
+# Pressure Points (Jane Street, November 2026): solution notes
 
-Word list: `wordfreq` top English words (`pip install wordfreq`).
+**Proposed answer: ANTWERPSCHE DIAMANTKRING (11 12)**. Unconfirmed until Jane Street posts the solution.
 
-## Strings that unscramble to a single word
-STARBOARD, PORT (sailing) · NORTH(+E), SOUTH, WEST, EAST(−E) (compass) ·
-INIESTA, BUSQUETS, MESSI(+E), XAVI = AIX+V (Barcelona footballers) ·
-KANSAS, UTAH, GUJARAT, WYOMING(−N) (places) · HEAVEN, HEALTH, MERCURY, VICTIM, VIOLINS,
-SQUARE, CROSS, MIMOSA, CAPABILITY, INSTABILITY, TRIANGLES, PALISADES, FIRST, RIGHT, DOWN,
-HOME, NINE, THREE, TWELVE(−H), CIRCLE(−E), PERCUSSION(−X) …
+## Mechanism
+* 19 emojis × 4 = 76 = Ø + the 75 sorted-letter strings.
+* Each emoji stands for four things laid out as a **diamond** (N/E/S/W). Pressure makes diamonds.
+* In every group, two items appear exactly, one has an **extra letter** and one is **missing a letter**.
+* In emoji order, the missing letters spell **LEUVEN GHENT BRUSSELS**. The extra letters spell
+  **NEWEST ROUGH EXCHANGE**: the newest Antwerp diamond bourse, which trades rough diamonds,
+  is the *Antwerpsche Diamantkring*. Antwerp is also the Belgian city missing from the first message.
 
-## Open questions
-* Several strings are a themed word with one letter extra or missing (NORTH+E, MESSI+E,
-  EAST−E, BOW+A, CIRCLE−E). Do the extra/missing letters spell the answer?
-* What links the 19 emojis to the strings? ⚽ → Barça players, 🧭 → compass points,
-  ⛵ → STARBOARD/PORT/BOW, 🎶 → VIOLINS/PERCUSSION, 🕓 → TWELVE/THREE/NINE look likely.
-* Why does the list start with Ø (empty set)? It hints that the strings are sets, sorted.
-* Long strings (11 to 19 letters) don't split into two sensible words; they may be 3+ words.
+## Groups (extra letter / missing letter)
+| Emoji | Diamond | Exact | Extra | Missing |
+|---|---|---|---|---|
+| 👸 | Queen (band) | MERCURY, DEACON | MAY+**N** (AMNY) | TAYLOR−**L** (AORTY) |
+| 🧭 | Compass | SOUTH, WEST | NORTH+**E** | EAST−**E** |
+| 🐷 | Pigpen-cipher X grid | T, V | S+**W** (SW) | U−**U** (Ø) |
+| ⚽ | Barça midfield | INIESTA, BUSQUETS | MESSI+**E** | XAVI−**V** (AIX) |
+| 🎮 | PlayStation buttons | SQUARE, CROSS | TRIANGLE+**S** | CIRCLE−**E** |
+| 🖼️ | Raphael's Sistine Madonna | SAINT SIXTUS, PUTTI | MADONNA+**T** | SAINT BARBARA−**N** |
+| 🧐 | Monopoly corners | GO, GO TO JAIL | FREE PARKING+**R** | JAIL/JUST VISITING−**G** |
+| ⚾ | Baseball diamond | FIRST, HOME | SECOND+**O** | THIRD−**H** |
+| 💻 | Diamond Model (intrusion analysis) | CAPABILITY, VICTIM | ADVERSARY+**U** | INFRASTRUCTURE−**E** |
+| 🐉 | Beijing's four temples | HEAVEN, SUN | EARTH+**G** | MOON−**N** (MOO) |
+| 🕹️ | D-pad | DOWN, RIGHT | UP+**H** | LEFT−**T** |
+| 🏛️ | *unresolved* | ? | ?+**E** | ?−**B** |
+| 🎶 | Orchestra | VIOLINS, DOUBLE BASSES | PERCUSSION+**X** | CONDUCTOR−**R** |
+| ⭐ | Southern Cross | MIMOSA, IMAI | GACRUX+**C** | ACRUX−**U** (ACRX) |
+| 🕓 | Clock face | THREE, NINE | TWELVE+**H** | SIX−**S** (IX) |
+| ⛵ | Ship | STARBOARD, PORT | BOW+**A** | STERN−**S** (ENRT) |
+| 🏜️ | States around Colorado | KANSAS, UTAH | WYOMING+**N** | NEW MEXICO−**E** |
+| 🪷 | India (extremes) | GUJARAT, WEST BENGAL | HIMACHAL PRADESH+**G** | TAMIL NADU−**L** |
+| ⚠️ | NFPA 704 fire diamond | HEALTH, INSTABILITY | FIRE+**E** | SPECIAL−**S** |
+
+The 🏛️ group's letters (E and B) follow from both messages. Its four strings are still undecoded:
+`AADEILPSS`, `AEILLNPSU`, `AABDEHNNOORRSTTUY`, `AAEEEHLNOOPRRSSTTTT`.
